@@ -1,0 +1,110 @@
+@import url('./directory.css');
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	background: #0b0a0a;
+	margin: 0;
+	font:
+		8pt 'MS Sans Serif',
+		sans-serif;
+}
+
+h1 {
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+table.main {
+	width: 100%;
+	height: 100%;
+	font:
+		8pt 'MS Sans Serif',
+		sans-serif;
+}
+
+.active-desktop {
+	position: relative;
+	left: -40pt;
+	letter-spacing: -4px;
+	font: 41pt Verdana;
+	font-weight: bold;
+	color: #424242;
+}
+
+#tabledata {
+	padding-bottom: 16px;
+}
+
+.page {
+	color: #8e92a7;
+	padding: 4% 40pt;
+}
+
+.page div.content {
+	height: 80%;
+	overflow-y: auto;
+}
+
+.page > div.content > * {
+	width: 60%;
+}
+
+.page div.content h1 {
+	padding-bottom: 5px;
+	border-bottom: #222 1px solid;
+}
+.page div.content h3 {
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+.page div.content p {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.navigation {
+	padding: 40px 30px;
+	padding-left: 40pt;
+	height: 0 !important;
+}
+
+.navigation a {
+	color: #8e92a7;
+	margin-right: 20px;
+}
+
+table.main {
+	border: 0;
+	width: 100%;
+	height: 100%;
+}
+/* 
+.toprow {
+	vertical-align: top;
+	max-height: 60%;
+}
+
+.bottomrow {
+	vertical-align: bottom;
+}
+ */
+
+.toprow {
+	vertical-align: top;
+	height: 80%;
+}
+
+.bottomrow {
+	height: 20%;
+}
+
+img {
+	image-rendering: pixelated;
+}

@@ -1,0 +1,29 @@
+div.directory {
+	padding: 10px 20px;
+}
+
+div.directory span {
+	padding: 0;
+	margin: 0;
+	display: block;
+	width: fit-content;
+	text-align: left;
+	min-width: unset;
+	background-color: transparent;
+	border: none;
+	margin-bottom: 4px;
+}
+
+div.directory span * {
+	vertical-align: middle;
+}
+
+div.directory span a {
+	text-decoration: underline;
+	color: #8e92a7;
+}
+
+div.directory span img {
+	margin-right: 6px;
+	height: 16px;
+}
