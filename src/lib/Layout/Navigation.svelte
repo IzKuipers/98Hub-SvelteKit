@@ -7,7 +7,7 @@
 	};
 </script>
 
-<td class="navigation">
+<div class="navigation">
 	{#each Object.entries(pages) as [path, caption]}
 		<span class="link">
 			<img src={bullet} alt="" />
@@ -16,7 +16,7 @@
 			</a>
 		</span>
 	{/each}
-</td>
+</div>
 
 <style>
 	span.link * {

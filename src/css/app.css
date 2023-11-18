@@ -14,27 +14,41 @@ body {
 		sans-serif;
 }
 
+div.page {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 70%;
+}
+
+div.bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+}
+
+div.bottom * {
+	vertical-align: middle;
+}
+
 h1 {
 	margin: 0;
 	margin-bottom: 10px;
 	font-size: 20px;
 }
 
-table.main {
-	width: 100%;
-	height: 100%;
-	font:
-		8pt 'MS Sans Serif',
-		sans-serif;
-}
-
 .active-desktop {
 	position: relative;
 	left: -40pt;
+	bottom: -7pt;
 	letter-spacing: -4px;
 	font: 41pt Verdana;
 	font-weight: bold;
 	color: #424242;
+	float: right;
 }
 
 #tabledata {
@@ -43,12 +57,12 @@ table.main {
 
 .page {
 	color: #8e92a7;
-	padding: 4% 40pt;
 }
 
 .page div.content {
-	height: 80%;
+	height: 100%;
 	overflow-y: auto;
+	margin: 4% 40pt;
 }
 
 .page > div.content > * {
@@ -78,31 +92,6 @@ table.main {
 .navigation a {
 	color: #8e92a7;
 	margin-right: 20px;
-}
-
-table.main {
-	border: 0;
-	width: 100%;
-	height: 100%;
-}
-/* 
-.toprow {
-	vertical-align: top;
-	max-height: 60%;
-}
-
-.bottomrow {
-	vertical-align: bottom;
-}
- */
-
-.toprow {
-	vertical-align: top;
-	height: 80%;
-}
-
-.bottomrow {
-	height: 20%;
 }
 
 img {

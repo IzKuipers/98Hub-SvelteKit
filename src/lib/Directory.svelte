@@ -25,7 +25,7 @@
 	{#each files as file}
 		<span>
 			<img src={fileIcon} alt="" />
-			<a href={file.resolved}>{file.name}/</a>
+			<a href={file.resolved}>{file.name}</a>
 		</span>
 	{/each}
 	<slot />

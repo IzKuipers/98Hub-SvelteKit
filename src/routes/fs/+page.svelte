@@ -7,4 +7,6 @@
 <h1>Filesystem</h1>
 <p>Select one of the below folders:</p>
 
-<Directory dirs={data.dirs} root />
+<Directory dirs={data.dirs} root></Directory>
+<h3>Important Files</h3>
+<Directory files={data.files}></Directory>
