@@ -1,0 +1,24 @@
+#Content {
+	position: absolute;
+	left: 30%;
+	width: 65%;
+	height: 100%;
+	padding: 19px;
+}
+
+#Content h1 {
+	color: black;
+	font: 13pt/15pt verdana;
+}
+#Content h2 {
+	color: black;
+	font: 12pt/15pt verdana;
+	font-weight: bold;
+}
+
+#Content h1.fs-title {
+	margin: -19px 0;
+	margin-bottom: 10px;
+	font: 16pt verdana;
+	font-weight: bold;
+}

@@ -1,99 +1,26 @@
 @import url('./directory.css');
-
+@import url('./panel.css');
+@import url('./content.css');
 html,
 body {
 	width: 100%;
 	height: 100%;
+	margin: 0;
 	overflow: hidden;
 }
 body {
-	background: #0b0a0a;
+	font: 8pt/10pt verdana;
 	margin: 0;
-	font:
-		8pt 'MS Sans Serif',
-		sans-serif;
 }
 
 div.page {
 	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 70%;
-}
-
-div.bottom {
-	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	width: 100%;
-	height: 20%;
-}
-
-div.bottom * {
-	vertical-align: middle;
-}
-
-h1 {
-	margin: 0;
-	margin-bottom: 10px;
-	font-size: 20px;
-}
-
-.active-desktop {
-	position: relative;
-	left: -40pt;
-	bottom: -7pt;
-	letter-spacing: -4px;
-	font: 41pt Verdana;
-	font-weight: bold;
-	color: #424242;
-	float: right;
-}
-
-#tabledata {
-	padding-bottom: 16px;
-}
-
-.page {
-	color: #8e92a7;
-}
-
-.page div.content {
 	height: 100%;
-	overflow-y: auto;
-	margin: 4% 40pt;
 }
 
-.page > div.content > * {
-	width: 60%;
-}
-
-.page div.content h1 {
-	padding-bottom: 5px;
-	border-bottom: #222 1px solid;
-}
-.page div.content h3 {
-	margin-bottom: 5px;
-	margin-top: 20px;
-}
-
-.page div.content p {
-	margin: 0;
-	margin-bottom: 10px;
-}
-
-.navigation {
-	padding: 40px 30px;
-	padding-left: 40pt;
-	height: 0 !important;
-}
-
-.navigation a {
-	color: #8e92a7;
-	margin-right: 20px;
-}
-
-img {
+* {
 	image-rendering: pixelated;
 }

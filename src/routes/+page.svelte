@@ -3,7 +3,8 @@
 	import system from '$assets/icon/system.gif';
 	import Directory from '$lib/Directory.svelte';
 	import ImageHeader from '$lib/ImageHeader.svelte';
-	import computer from '$assets/computer.gif';
+	import computer from '$assets/globe.gif';
+	import ie from '$assets/ie.gif';
 </script>
 
 <ImageHeader src={computer}>Cortex 98</ImageHeader>
@@ -26,3 +27,5 @@
 		<a href="/info">System Information</a>
 	</span>
 </Directory>
+<br />
+<img src={ie} alt="Works with Internet Explorer" />

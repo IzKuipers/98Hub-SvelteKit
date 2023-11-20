@@ -5,6 +5,6 @@
 	export let data: PageData;
 </script>
 
-<h1>Contents of {data.path}</h1>
+<h1 class="fs-title">{data.path}</h1>
 
 <Directory dirs={data.dirs} files={data.files} parent={data.parent} />

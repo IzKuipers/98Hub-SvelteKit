@@ -4,9 +4,5 @@
 	export let data: PageData;
 </script>
 
-<h1>Filesystem</h1>
-<p>Select one of the below folders:</p>
-
-<Directory dirs={data.dirs} root></Directory>
-<h3>Important Files</h3>
-<Directory files={data.files}></Directory>
+<h1 class="fs-title">Filesystem</h1>
+<Directory dirs={data.dirs} files={data.files} root></Directory>

@@ -9,21 +9,29 @@
 
 <div class="navigation">
 	{#each Object.entries(pages) as [path, caption]}
-		<span class="link">
+		<div class="link">
 			<img src={bullet} alt="" />
 			<a href={path}>
 				{caption}
 			</a>
-		</span>
+		</div>
 	{/each}
 </div>
 
 <style>
-	span.link * {
+	div.navigation {
+		padding: 0 8px;
+	}
+	div.link * {
 		vertical-align: middle;
 	}
 
-	span.link img {
+	div.link {
+		margin-bottom: 4px;
+		display: block;
+	}
+
+	div.link img {
 		margin-right: 5px;
 		height: 13px;
 	}
