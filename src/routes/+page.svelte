@@ -4,7 +4,7 @@
 	import Directory from '$lib/Directory.svelte';
 	import ImageHeader from '$lib/ImageHeader.svelte';
 	import computer from '$assets/globe.gif';
-	import ie from '$assets/ie.gif';
+	import ie from '$assets/freeie.gif';
 </script>
 
 <ImageHeader src={computer}>Cortex 98</ImageHeader>
