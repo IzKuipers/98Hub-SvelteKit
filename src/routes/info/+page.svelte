@@ -32,18 +32,6 @@
 		<td>Filesystem Size</td>
 		<td>{data.sizeFormatted} ({data.size} Bytes)*</td>
 	</tr>
-	<tr>
-		<td>Who am I?</td>
-		<td>{data.server}\{data.user}</td>
-	</tr>
-	<tr>
-		<td>Processor count</td>
-		<td>{data.processors}</td>
-	</tr>
-	<tr>
-		<td>OS</td>
-		<td>{data.os}</td>
-	</tr>
 </table>
 
 <p>* May not be accurate.</p>
