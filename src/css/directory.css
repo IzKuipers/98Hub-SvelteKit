@@ -1,27 +1,31 @@
-div.directory span {
+table.directory td {
 	padding: 0;
 	margin: 0;
-	display: block;
 	width: fit-content;
 	text-align: left;
 	min-width: unset;
 	background-color: transparent;
 	border: none;
 	margin-bottom: 4px;
+	height: 17px;
 }
 
-div.directory span * {
+table.directory * {
 	vertical-align: middle;
 }
 
-div.directory span a {
+table.directory td a {
 	/* text-decoration: underline;
 	color: #8e92a7; */
 	color: black;
 	text-decoration: none;
 }
 
-div.directory span img {
+table.directory td img {
 	margin-right: 6px;
 	height: 16px;
+}
+
+table.directory td.name {
+	padding-right: 50px;
 }

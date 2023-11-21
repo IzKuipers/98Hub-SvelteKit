@@ -1,8 +1,9 @@
 import { error } from '@sveltejs/kit';
-import { lstat, readdir } from 'fs/promises';
+import { lstat, readFile, readdir } from 'fs/promises';
 import { join, resolve } from 'path';
 import { join as joinPosix } from 'path/posix';
 import type { PageServerLoad } from './$types';
+import { formatBytes } from '../../../ts/bytes';
 export const load = (async ({ params }) => {
 	const path = resolve('fs', params.path);
 
@@ -15,7 +16,9 @@ export const load = (async ({ params }) => {
 		for (let i = 0; i < contents.length; i++) {
 			const name = contents[i].name;
 			const item = join(path, name);
-			const isDir = (await lstat(item)).isDirectory();
+			const stat = await lstat(item);
+			const isDir = stat.isDirectory();
+			const size = isDir ? 0 : stat.size;
 			const resolved = `/${joinPosix(isDir ? `fs` : `download`, params.path, name)}`;
 
 			if (isDir) {
@@ -24,10 +27,19 @@ export const load = (async ({ params }) => {
 				continue;
 			}
 
-			files.push({ resolved, name });
+			files.push({ resolved, name, size, sizeStr: formatBytes(size) });
 		}
 
-		return { files, dirs, path: params.path, parent: `/${joinPosix(`fs`, params.path, '..')}` };
+		const split = params.path.split('/');
+		const dirName = split[split.length - 1];
+
+		return {
+			files,
+			dirs,
+			path: params.path,
+			name: dirName,
+			parent: `/${joinPosix(`fs`, params.path, '..')}`
+		};
 	} catch {
 		throw error(404, 'Directory not found!');
 	}

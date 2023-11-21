@@ -1,16 +1,17 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { join, resolve } from 'path';
-import { lstat, readdir } from 'fs/promises';
+import { lstat, readFile, readdir } from 'fs/promises';
 import { join as joinPosix } from 'path/posix';
+import { formatBytes } from '../../ts/bytes';
 export const load = (async ({ params }) => {
 	const path = resolve('fs');
 
 	try {
 		const contents = await readdir(path, { withFileTypes: true });
 
-		const dirs = [];
-		const files = [];
+		const dirs: FsDir[] = [];
+		const files: FsFile[] = [];
 
 		for (let i = 0; i < contents.length; i++) {
 			const name = contents[i].name;
@@ -24,12 +25,13 @@ export const load = (async ({ params }) => {
 				continue;
 			}
 
-			files.push({ resolved, name });
+			const text = await readFile(item, 'utf-8');
+
+			files.push({ resolved, name, size: text.length, sizeStr: formatBytes(text.length) });
 		}
 
 		return { files, dirs };
 	} catch {
 		throw error(404, 'Directory not found!');
 	}
-	/* return { path: params.path }; */
 }) satisfies PageServerLoad;

@@ -1,10 +1,12 @@
 <script lang="ts">
 	import Directory from '$lib/Directory.svelte';
+	import ImageHeader from '$lib/ImageHeader.svelte';
 	import type { PageData } from './$types';
+	import computer from '$assets/computer.gif';
 
 	export let data: PageData;
 </script>
 
-<h1 class="fs-title">{data.path}</h1>
+<ImageHeader src={computer}>{data.name}</ImageHeader>
 
 <Directory dirs={data.dirs} files={data.files} parent={data.parent} />

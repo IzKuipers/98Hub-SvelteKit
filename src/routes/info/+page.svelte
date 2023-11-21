@@ -21,22 +21,32 @@
 <h2>Statistics</h2>
 <table>
 	<tr>
-		<td>Files</td>
-		<td>{data.fileCount}</td>
+		<td>File count</td>
+		<td>{data.fileCount} files</td>
 	</tr>
 	<tr>
-		<td>Folders</td>
-		<td>{data.dirCount}</td>
-	</tr>
-	<tr>
-		<td>Total</td>
-		<td>{data.total}</td>
+		<td>Folder count</td>
+		<td>{data.dirCount} folders</td>
 	</tr>
 	<tr>
 		<td>Filesystem Size</td>
-		<td>{data.sizeFormatted} ({data.size} Bytes)</td>
+		<td>{data.sizeFormatted} ({data.size} Bytes)*</td>
+	</tr>
+	<tr>
+		<td>Who am I?</td>
+		<td>{data.server}\{data.user}</td>
+	</tr>
+	<tr>
+		<td>Processor count</td>
+		<td>{data.processors}</td>
+	</tr>
+	<tr>
+		<td>OS</td>
+		<td>{data.os}</td>
 	</tr>
 </table>
+
+<p>* May not be accurate.</p>
 
 <style>
 	td {

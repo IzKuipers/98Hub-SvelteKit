@@ -1,10 +1,10 @@
 <script lang="ts">
+	import computer from '$assets/globe.gif';
 	import drive from '$assets/icon/drive.gif';
 	import system from '$assets/icon/system.gif';
+	import Badges from '$lib/Badges.svelte';
 	import Directory from '$lib/Directory.svelte';
 	import ImageHeader from '$lib/ImageHeader.svelte';
-	import computer from '$assets/globe.gif';
-	import ie from '$assets/freeie.gif';
 </script>
 
 <ImageHeader src={computer}>Cortex 98</ImageHeader>
@@ -18,14 +18,24 @@
 <h3>Quick links</h3>
 
 <Directory>
-	<span>
-		<img src={drive} alt="" />
-		<a href="/fs">Cortex 98 Filesystem</a>
-	</span>
-	<span>
-		<img src={system} alt="" />
-		<a href="/info">System Information</a>
-	</span>
+	<tr>
+		<td>
+			<img src={drive} alt="" />
+		</td>
+
+		<td>
+			<a href="/fs">Cortex 98 Filesystem</a>
+		</td>
+	</tr>
+	<tr>
+		<td><img src={system} alt="" /></td>
+		<td><a href="/info">System Information</a></td>
+	</tr>
 </Directory>
-<br />
-<img src={ie} alt="Works with Internet Explorer" />
+<Badges />
+
+<style>
+	h3 {
+		margin-bottom: 5px;
+	}
+</style>

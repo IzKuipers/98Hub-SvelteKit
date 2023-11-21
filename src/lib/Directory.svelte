@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let dirs: { resolved: string; name: string }[] = [];
-	export let files: { resolved: string; name: string }[] = [];
+	export let dirs: FsDir[] = [];
+	export let files: FsFile[] = [];
 	export let parent: string = '';
 	export let root = false;
 
@@ -9,24 +9,39 @@
 	import fileIcon from '$assets/icon/file.gif';
 </script>
 
-<div class="directory">
+<table class="directory">
 	{#if parent}
-		<span>
-			<img src={folder} alt="" />
-			<a href={parent}>..</a>
-		</span>
+		<tr>
+			<td>
+				<img src={folder} alt="" />
+			</td>
+			<td>
+				<a href={parent}>..</a>
+			</td>
+			<td>&lt;PARENT&gt;</td>
+		</tr>
 	{/if}
 	{#each dirs as dir}
-		<span>
-			<img src={root ? appfolder : folder} alt="" />
-			<a href={dir.resolved}>{dir.name}/</a>
-		</span>
+		<tr>
+			<td>
+				<img src={root ? appfolder : folder} alt="" />
+			</td>
+			<td class="name">
+				<a href={dir.resolved}>{dir.name}/</a>
+			</td>
+			<td>&lt;DIR&gt;</td>
+		</tr>
 	{/each}
 	{#each files as file}
-		<span>
-			<img src={fileIcon} alt="" />
-			<a href={file.resolved}>{file.name}</a>
-		</span>
+		<tr>
+			<td>
+				<img src={fileIcon} alt="" />
+			</td>
+			<td class="name">
+				<a href={file.resolved}>{file.name}</a>
+			</td>
+			<td>{file.sizeStr}</td>
+		</tr>
 	{/each}
 	<slot />
-</div>
+</table>
