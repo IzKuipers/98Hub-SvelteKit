@@ -2,6 +2,8 @@
 	import computer from '$assets/globe.gif';
 	import drive from '$assets/icon/drive.gif';
 	import system from '$assets/icon/system.gif';
+	import tweaks from '$assets/tweaks.gif';
+	import drivers from '$assets/icon/newhw.gif';
 	import Badges from '$lib/Badges.svelte';
 	import Directory from '$lib/Directory.svelte';
 	import ImageHeader from '$lib/ImageHeader.svelte';
@@ -26,6 +28,14 @@
 		<td>
 			<a href="/fs">Cortex 98 Filesystem</a>
 		</td>
+	</tr>
+	<tr>
+		<td><img src={drivers} alt="" /></td>
+		<td><a href="/info">Drivers</a></td>
+	</tr>
+	<tr>
+		<td><img src={tweaks} alt="" /></td>
+		<td><a href="/info">Tweaks</a></td>
 	</tr>
 	<tr>
 		<td><img src={system} alt="" /></td>
