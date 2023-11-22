@@ -1,14 +1,10 @@
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import url from 'url';
-export const load = (async () => {
-	return {};
-}) satisfies PageServerLoad;
+export const load = (async ({ request }) => {
+	const query = url.parse(request.url as string, true).query;
 
-export const actions = {
-	default: async ({ cookies, request }) => {
-		const data = await request.formData();
-		const query = data.get('query');
-		return { query };
-	}
-} satisfies Actions;
+	console.log(query);
+
+	return { query: query['query'] };
+}) satisfies PageServerLoad;
