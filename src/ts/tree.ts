@@ -18,8 +18,6 @@ export async function getTree(path: string): Promise<string[]> {
 				result.push(...(await getTree(itemPath)));
 				continue;
 			}
-
-			result.push(itemPath);
 		} catch {
 			continue;
 		}
