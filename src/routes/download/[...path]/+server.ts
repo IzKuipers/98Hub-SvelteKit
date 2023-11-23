@@ -10,12 +10,12 @@ export const GET: RequestHandler = async ({ params }) => {
 	if (!existsSync(path)) throw error(404, 'File not found');
 
 	try {
-		throw error(404, 'File not found');
-	} catch {
 		const isFile = (await lstat(path)).isFile();
 
 		if (!isFile) throw error(400, "Can't download a directory, you silly goof");
 
 		return new Response(await readFile(path));
+	} catch (e) {
+		throw e || error(404, 'File not found');
 	}
 };

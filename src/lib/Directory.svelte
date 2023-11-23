@@ -1,12 +1,14 @@
 <script lang="ts">
 	export let dirs: FsDir[] = [];
 	export let files: FsFile[] = [];
+	export let searches: FsItem[] = [];
 	export let parent: string = '';
 	export let root = false;
 
 	import folder from '$assets/icon/folder.gif';
 	import appfolder from '$assets/icon/appfolder.gif';
 	import fileIcon from '$assets/icon/file.gif';
+	import searchIcon from '$assets/result.gif';
 </script>
 
 <table class="directory">
@@ -21,6 +23,16 @@
 			<td>&lt;PARENT&gt;</td>
 		</tr>
 	{/if}
+	{#each searches as search}
+		<tr>
+			<td>
+				<img src={searchIcon} alt="" />
+			</td>
+			<td class="name">
+				<a href={search.resolved}>{search.name}</a>
+			</td>
+		</tr>
+	{/each}
 	{#each dirs as dir}
 		<tr>
 			<td>

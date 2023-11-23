@@ -3,14 +3,6 @@ import getFolderSize from 'get-folder-size';
 import { glob } from 'glob';
 import { formatBytes } from '../../ts/bytes';
 import type { PageServerLoad } from './$types';
-/* import {
-	COMPUTERNAME,
-	LOGONSERVER,
-	NODE,
-	NUMBER_OF_PROCESSORS,
-	OS,
-	USERNAME
-} from '$env/static/private'; */
 
 export const load = (async () => {
 	try {
@@ -26,12 +18,6 @@ export const load = (async () => {
 			size: fsSize,
 			total: globbedFiles,
 			sizeFormatted: formatBytes(fsSize)
-			/* 			hostname: COMPUTERNAME,
-			processors: NUMBER_OF_PROCESSORS,
-			os: OS,
-			node: NODE,
-			server: LOGONSERVER,
-			user: USERNAME */
 		};
 	} catch {
 		throw error(500, "Couldn't get server information");

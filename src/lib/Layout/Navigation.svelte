@@ -3,7 +3,7 @@
 	const pages: Record<string, string> = {
 		'/': 'Home',
 		'/fs': 'Filesystem',
-		'/drivers': 'Drivers',
+		'/search': 'Search Files',
 		'/tweaks': 'Tweaks',
 		'/info': 'Information'
 	};
