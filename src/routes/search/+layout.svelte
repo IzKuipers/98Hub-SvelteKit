@@ -6,16 +6,12 @@
 	export let data: LayoutData;
 </script>
 
-<center>
-	<h1 class="title">Search</h1>
-	<ImageHeader src={searchIcon}>
-		<form action="/search">
-			<input type="text" name="query" value={data.query} />
-			<button type="submit">Search</button>
-		</form>
-	</ImageHeader>
-	<hr />
-</center>
+<ImageHeader src={searchIcon}>
+	<form action="/search">
+		<input type="text" name="query" value={data.query} />
+		<button type="submit">Search</button>
+	</form>
+</ImageHeader>
 <slot />
 
 <style>
@@ -31,9 +27,5 @@
 		height: 22px;
 		margin-right: 5px;
 		width: 300px;
-	}
-	#Content center h1.title {
-		font: 16pt verdana;
-		font-weight: bold;
 	}
 </style>

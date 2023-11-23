@@ -3,7 +3,7 @@
 	import drive from '$assets/icon/drive.gif';
 	import system from '$assets/icon/system.gif';
 	import tweaks from '$assets/tweaks.gif';
-	import drivers from '$assets/icon/newhw.gif';
+	import findicon from '$assets/findico.gif';
 	import Badges from '$lib/Badges.svelte';
 	import Directory from '$lib/Directory.svelte';
 	import ImageHeader from '$lib/ImageHeader.svelte';
@@ -24,18 +24,17 @@
 		<td>
 			<img src={drive} alt="" />
 		</td>
-
 		<td>
 			<a href="/fs">Cortex 98 Filesystem</a>
 		</td>
 	</tr>
 	<tr>
-		<td><img src={drivers} alt="" /></td>
-		<td><a href="/drivers">Drivers</a></td>
+		<td><img src={findicon} alt="" /></td>
+		<td><a href="/search">Search...</a></td>
 	</tr>
 	<tr>
 		<td><img src={tweaks} alt="" /></td>
-		<td><a href="/tweaks">Tweaks</a></td>
+		<td><a href="/tweaks">Tweaks</a> </td>
 	</tr>
 	<tr>
 		<td><img src={system} alt="" /></td>
