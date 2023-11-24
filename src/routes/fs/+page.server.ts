@@ -4,6 +4,7 @@ import { join, resolve } from 'path';
 import { lstat, readFile, readdir } from 'fs/promises';
 import { join as joinPosix } from 'path/posix';
 import { formatBytes } from '../../ts/bytes';
+import { sidebarTitle } from '../../ts/env';
 export const load = (async ({ params }) => {
 	const path = resolve('fs');
 
@@ -29,6 +30,8 @@ export const load = (async ({ params }) => {
 
 			files.push({ resolved, name, size: text.length, sizeStr: formatBytes(text.length) });
 		}
+
+		sidebarTitle.set('Filesystem');
 
 		return { files, dirs };
 	} catch {

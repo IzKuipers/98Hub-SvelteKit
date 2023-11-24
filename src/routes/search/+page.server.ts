@@ -3,7 +3,9 @@ import type { PageServerLoad } from './$types';
 import url from 'url';
 import { getRelativeTree, getTree } from '../../ts/tree';
 import Fuse from 'fuse.js';
+import { sidebarTitle } from '../../ts/env';
 export const load = (async ({ request }) => {
+	sidebarTitle.set('Search');
 	const query = url.parse(request.url as string, true).query;
 	const searchQuery = query.query as string;
 

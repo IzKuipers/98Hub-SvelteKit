@@ -4,6 +4,7 @@ import { join, resolve } from 'path';
 import { join as joinPosix } from 'path/posix';
 import type { PageServerLoad } from './$types';
 import { formatBytes } from '../../../ts/bytes';
+import { sidebarTitle } from '../../../ts/env';
 export const load = (async ({ params }) => {
 	const path = resolve('fs', params.path);
 
@@ -32,6 +33,8 @@ export const load = (async ({ params }) => {
 
 		const split = params.path.split('/');
 		const dirName = split[split.length - 1];
+
+		sidebarTitle.set(dirName);
 
 		return {
 			files,
