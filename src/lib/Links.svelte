@@ -14,7 +14,7 @@
 					<a href={link.url}>{link.name}</a>
 				</td>
 				<td class="name">
-					<a href={link.url}>{link.url}</a>
+					<a href={link.url}>{link.truncated}</a>
 				</td>
 				<td>
 					<form action="/links/delete">

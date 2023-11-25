@@ -49,9 +49,15 @@ export async function addLink(name: string, url: string): Promise<boolean> {
 
 	if (exists) return false;
 
-	links.push({ name, url });
+	const truncated = truncate(url, 40);
+
+	links.push({ name, url, truncated });
 
 	await setLinks(links);
 
 	return true;
+}
+
+function truncate(str: string, n: number) {
+	return str.length > n ? str.slice(0, n - 1) + '...' : str;
 }
