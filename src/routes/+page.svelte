@@ -1,12 +1,16 @@
 <script lang="ts">
+	import findicon from '$assets/findico.gif';
 	import computer from '$assets/globe.gif';
 	import drive from '$assets/icon/drive.gif';
+	import mouse from '$assets/icon/mouse.gif';
 	import system from '$assets/icon/system.gif';
-	import tweaks from '$assets/tweaks.gif';
-	import findicon from '$assets/findico.gif';
 	import Badges from '$lib/Badges.svelte';
 	import Directory from '$lib/Directory.svelte';
 	import ImageHeader from '$lib/ImageHeader.svelte';
+	import Links from '$lib/Links.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <ImageHeader src={computer}>Cortex 98</ImageHeader>
@@ -18,7 +22,14 @@
 </p>
 
 <h3>Quick links</h3>
+<Links links={data.links} minimal>
+	<tr>
+		<td><img src={mouse} alt="" /></td>
+		<td><a href="/links">More...</a></td>
+	</tr>
+</Links>
 
+<h3>Resources</h3>
 <Directory>
 	<tr>
 		<td>
@@ -31,10 +42,6 @@
 	<tr>
 		<td><img src={findicon} alt="" /></td>
 		<td><a href="/search">Search...</a></td>
-	</tr>
-	<tr>
-		<td><img src={tweaks} alt="" /></td>
-		<td><a href="/links">Handy Links</a> </td>
 	</tr>
 	<tr>
 		<td><img src={system} alt="" /></td>
