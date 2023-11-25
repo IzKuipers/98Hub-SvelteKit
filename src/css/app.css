@@ -1,6 +1,7 @@
 @import url('./directory.css');
 @import url('./panel.css');
 @import url('./content.css');
+@import url('./links.css');
 html,
 body {
 	width: 100%;

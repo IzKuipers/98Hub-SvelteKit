@@ -34,7 +34,7 @@
 	</tr>
 	<tr>
 		<td><img src={tweaks} alt="" /></td>
-		<td><a href="/tweaks">Tweaks</a> </td>
+		<td><a href="/links">Handy Links</a> </td>
 	</tr>
 	<tr>
 		<td><img src={system} alt="" /></td>

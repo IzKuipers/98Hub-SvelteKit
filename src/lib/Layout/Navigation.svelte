@@ -2,9 +2,9 @@
 	import bullet from '$assets/bullet5.gif';
 	const pages: Record<string, string> = {
 		'/': 'Home',
+		'/links': 'Handy links',
 		'/fs': 'Filesystem',
 		'/search': 'Search Files',
-		'/tweaks': 'Tweaks',
 		'/info': 'Information'
 	};
 </script>

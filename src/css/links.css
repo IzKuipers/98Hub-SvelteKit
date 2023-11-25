@@ -1,0 +1,12 @@
+#LinksContent #AddLink {
+	margin: 0;
+}
+
+.inner.page-links {
+	margin: 0px 0px 0px 0px !important;
+}
+
+#LinksContent #content-top #part,
+#LinksContent #content-bottom #part {
+	padding: 19px;
+}

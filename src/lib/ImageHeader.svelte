@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let src: string;
+	export let id: string = 'ImageHeader';
 </script>
 
-<h1>
+<h1 {id}>
 	<img {src} alt="" />
 	<span><slot /></span>
 </h1>

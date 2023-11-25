@@ -1,11 +1,12 @@
 import { error } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
-import { sidebarTitle } from '../ts/env';
+import { innerClass, sidebarTitle } from '../ts/env';
 
 const UA_REQUIRED = ['windows 98', 'msie'];
 
 export const load = (async ({ request }) => {
 	sidebarTitle.set('');
+	innerClass.set('');
 
 	const userAgent = request.headers.get('user-agent');
 	const lowercase = userAgent?.toLowerCase();

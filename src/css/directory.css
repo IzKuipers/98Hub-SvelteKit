@@ -14,6 +14,10 @@ table.directory * {
 	vertical-align: middle;
 }
 
+table.directory form {
+	display: inline;
+}
+
 table.directory td a {
 	/* text-decoration: underline;
 	color: #8e92a7; */
@@ -28,4 +32,15 @@ table.directory td img {
 
 table.directory td.name {
 	padding-right: 50px;
+}
+
+table.directory button.delete {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+	color: currentcolor;
+	font: 8pt/10pt verdana;
+	color: blue;
+	text-decoration: underline;
 }
