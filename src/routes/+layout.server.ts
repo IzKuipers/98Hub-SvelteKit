@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
 import { innerClass, sidebarTitle } from '../ts/env';
 
-const UA_REQUIRED = ['windows 98', 'msie'];
+const UA_REQUIRED = ['windows', 'msie'];
 
 export const load = (async ({ request }) => {
 	sidebarTitle.set('');
