@@ -1,7 +1,7 @@
-import { error, redirect } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
+import { redirect } from '@sveltejs/kit';
 import urlLib from 'url';
 import { addLink } from '../../../ts/links';
+import type { PageServerLoad } from './$types';
 export const load = (async ({ request }) => {
 	const query = urlLib.parse(request.url as string, true).query;
 

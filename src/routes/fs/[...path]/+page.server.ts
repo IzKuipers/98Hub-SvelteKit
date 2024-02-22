@@ -1,10 +1,10 @@
 import { error } from '@sveltejs/kit';
-import { lstat, readFile, readdir } from 'fs/promises';
+import { lstat, readdir } from 'fs/promises';
 import { join, resolve } from 'path';
 import { join as joinPosix } from 'path/posix';
-import type { PageServerLoad } from './$types';
 import { formatBytes } from '../../../ts/bytes';
 import { sidebarTitle } from '../../../ts/env';
+import type { PageServerLoad } from './$types';
 export const load = (async ({ params }) => {
 	const path = resolve('fs', params.path);
 

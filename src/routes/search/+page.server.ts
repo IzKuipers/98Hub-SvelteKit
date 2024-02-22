@@ -1,9 +1,9 @@
 import { error } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
-import url from 'url';
-import { getRelativeTree, getTree } from '../../ts/tree';
 import Fuse from 'fuse.js';
+import url from 'url';
 import { sidebarTitle } from '../../ts/env';
+import { getRelativeTree, getTree } from '../../ts/tree';
+import type { PageServerLoad } from './$types';
 export const load = (async ({ request }) => {
 	sidebarTitle.set('Search');
 	const query = url.parse(request.url as string, true).query;

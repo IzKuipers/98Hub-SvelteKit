@@ -1,8 +1,8 @@
-import { resolve } from 'path';
-import type { RequestHandler } from './$types';
-import { lstat, readFile } from 'fs/promises';
 import { error } from '@sveltejs/kit';
 import { existsSync } from 'fs';
+import { lstat, readFile } from 'fs/promises';
+import { resolve } from 'path';
+import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async ({ params }) => {
 	const path = resolve('fs', params.path);

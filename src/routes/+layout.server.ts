@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import type { LayoutServerLoad } from './$types';
 import { innerClass, sidebarTitle } from '../ts/env';
+import type { LayoutServerLoad } from './$types';
 
 const UA_REQUIRED = ['windows', 'msie'];
 
