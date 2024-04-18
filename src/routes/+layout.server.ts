@@ -18,7 +18,7 @@ export const load = (async ({ request }) => {
 		if (!lowercase?.includes(UA_REQUIRED[i]))
 			throw error(
 				403,
-				"Your browser doesn't contain the required UserAgent strings. Cortex 98 requires Windows 98 and Internet Explorer."
+				"Your browser doesn't contain the required UserAgent strings. Cortex 98 works on at most Internet Explorer 8. Recommended is Internet Explorer 5 on Windows 98."
 			);
 	}
 

@@ -6,7 +6,7 @@
 
 <div class="badges">
 	<img src={ie} alt="Internet Explorer" />
-	<img src={win} alt="Windows 98" />
+	<img src={win} alt="Windows" />
 	<img src={c98} alt="Cortex 98" />
 </div>
 
