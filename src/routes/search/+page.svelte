@@ -10,12 +10,13 @@
 
 {#if data.results}
 	<p>
-		<img src={data.results.length < 500 ? hourglass : warning} alt="" />
+		<img src={data.results.length < 100 ? hourglass : warning} alt="" />
 		<span>
 			Found {data.results.length} results for <b>{data.query}</b> in {data.duration}
 			seconds.
-			{#if data.results.length > 500}
-				There are more than 500 results! Your browser might run slower.
+			{#if data.results.length > 100}
+				There are more than 100 results! I don't display more than 100 items. Try being a bit more
+				specific.
 			{/if}
 		</span>
 	</p>

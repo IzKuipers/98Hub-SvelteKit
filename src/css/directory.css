@@ -32,6 +32,7 @@ table.directory td img {
 
 table.directory td.name {
 	padding-right: 50px;
+	min-width: 80px;
 }
 
 table.directory button.delete {

@@ -20,16 +20,7 @@
 	Put your favourite links here so that you can easily reference them in the future.<br /><br />
 	Click <i>Delete</i> to delete any one of the links from the list.
 </p>
-<Links links={data.links}>
-	{#if !data.links.length}
-		<tr>
-			<td>
-				<img src={warning} alt="" />
-			</td>
-			<td class="name">There are no links registered!</td>
-		</tr>
-	{/if}
-</Links>
+<Links links={data.links}></Links>
 
 <style>
 	p * {

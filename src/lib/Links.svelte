@@ -1,11 +1,12 @@
 <script lang="ts">
 	import globe from '$assets/icon/globe.gif';
+	import warning from '$assets/warning.gif';
 	export let links: Link[];
 	export let minimal = false;
 </script>
 
 <table class="directory">
-	{#if links}
+	{#if links && links.length}
 		{#each links as link}
 			<tr>
 				<td>
@@ -27,6 +28,13 @@
 				{/if}
 			</tr>
 		{/each}
+	{:else}
+		<tr>
+			<td>
+				<img src={warning} alt="" />
+			</td>
+			<td> There are no links here... </td>
+		</tr>
 	{/if}
 	<slot />
 </table>

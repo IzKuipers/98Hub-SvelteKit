@@ -16,8 +16,8 @@
 <ImageHeader src={computer}>Cortex 98</ImageHeader>
 
 <p>
-	The Cortex page for Windows 98 systems. This hub has been designed to<br />
-	transfer common data to legacy Windows 98 machines that have access to the<br />
+	The Cortex page for old Windows systems. This hub has been designed to<br />
+	transfer common data to legacy Windows machines that have access to the<br />
 	intranet of the Cortex.
 </p>
 
@@ -25,7 +25,7 @@
 <Links links={data.links} minimal>
 	<tr>
 		<td><img src={mouse} alt="" /></td>
-		<td><a href="/links">More...</a></td>
+		<td><a href="/links">View all...</a></td>
 	</tr>
 </Links>
 

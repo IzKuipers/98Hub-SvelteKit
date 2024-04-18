@@ -17,7 +17,7 @@
 			<td>
 				<img src={folder} alt="" />
 			</td>
-			<td>
+			<td class="name">
 				<a href={parent}>..</a>
 			</td>
 			<td>&lt;PARENT&gt;</td>

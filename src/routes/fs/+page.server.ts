@@ -18,7 +18,7 @@ export const load = (async ({ params }) => {
 			const name = contents[i].name;
 			const item = join(path, name);
 			const isDir = (await lstat(item)).isDirectory();
-			const resolved = joinPosix(`fs`, name);
+			const resolved = joinPosix(`/${isDir ? 'fs' : 'download'}`, name);
 
 			if (isDir) {
 				dirs.push({ resolved, name });

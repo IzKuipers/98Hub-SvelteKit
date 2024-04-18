@@ -12,21 +12,23 @@ export const load = (async ({ request }) => {
 	if (!searchQuery) return;
 
 	const start = new Date().getTime();
-	try {
-		const files = await getTree('fs');
-		const fuse = new Fuse(files);
-		const search = fuse.search(searchQuery);
-		const results = (await getRelativeTree(search.map((r) => r.item))).map((p) => {
-			return {
-				resolved: p,
-				name: p.replaceAll('/download/', '').replaceAll('/fs/', '')
-			};
-		});
+	/* try { */
+	const files = await getTree('fs');
+	const fuse = new Fuse(files);
+	const search = fuse.search(searchQuery);
+	const results = (await getRelativeTree(search.map((r) => r.item))).map((p) => {
+		return {
+			resolved: p,
+			name: p.replaceAll('/download/', '').replaceAll('/fs/', '')
+		};
+	});
 
-		const end = new Date().getTime();
+	results.length = results.length > 100 ? 100 : results.length;
 
-		return { results, duration: ((end - start) / 1000).toFixed(2) };
-	} catch {
+	const end = new Date().getTime();
+
+	return { results, duration: ((end - start) / 1000).toFixed(2) };
+	/* 	} catch {
 		throw error(500, 'Filesystem access failed.');
-	}
+	} */
 }) satisfies PageServerLoad;
