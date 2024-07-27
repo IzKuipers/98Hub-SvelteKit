@@ -9,6 +9,7 @@
 
 #Content div.inner {
 	margin: 19px;
+	font: 8pt/10pt verdana;
 }
 
 #Content h1 {
@@ -29,4 +30,8 @@
 	font-weight: bold;
 	width: 90%;
 	overflow: hidden;
+}
+
+table {
+	font: 8pt/10pt verdana;
 }

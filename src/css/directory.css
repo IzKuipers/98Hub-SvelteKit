@@ -12,6 +12,7 @@ table.directory td {
 
 table.directory * {
 	vertical-align: middle;
+	font: 8pt/10pt verdana !important;
 }
 
 table.directory form {
